@@ -1,4 +1,4 @@
-package com.nexcode.security.sb3security6.auth;
+package com.nexcode.security.sb3security6.controller.rest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +22,7 @@ public class AuthenticationController {
 
 	@PostMapping("/register")
 	public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request) {
+		System.out.println("Hello");
 		return ResponseEntity.ok(authService.register(request));
 	}
 
